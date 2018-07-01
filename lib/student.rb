@@ -74,7 +74,7 @@ class Student
 
     def self.students_below_12th_grade
       sql = <<-SQL
-      SELECT * 
+      SELECT *
       from students
       WHERE grade <= 11
       SQL
