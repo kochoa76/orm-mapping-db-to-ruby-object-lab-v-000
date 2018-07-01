@@ -75,7 +75,7 @@ class Student
     def self.students_below_12th_grade
       sql = <<-SQL
       SELECT *
-      from students
+      FROM students
       WHERE grade <= 11
       SQL
 
@@ -84,6 +84,17 @@ class Student
       end
     end
 
+    def self.first_X_students_in_grade_10(X)
+      sql = <<-SQL
+      SELECT * FROM  
+      students WHERE 
+      grade = 10 
+      LIMIT 10 
+      SQL 
+
+      
+      
+      
 
   def self.drop_table
     sql = "DROP TABLE IF EXISTS students"
